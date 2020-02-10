@@ -4,12 +4,15 @@
   </div>
 
 <div>
-  <table>
+  <table class="highlight">
     <thead>
       <tr>
         <th>Name</th>
         <th>Description</th>
         <th>User</th>
+        <th></th>
+        <th></th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -17,16 +20,16 @@
         <tr>
           <td><%= toy.name %></td>
           <td><%= toy.description %></td>
-          <td><%= toy.user %></td>
-          <td>
-            <%= link_to "edit", edit_toy_path(toy.id )%>
-            <%= link_to "show", toy_path(toy.id) %>
-            <%= link_to "delete", toy_path(toy),
+          <td><i class="material-icons">face</i><br><%= toy.user %></td>
+          <td><%= link_to "edit", edit_toy_path(toy.id ), class: "waves-effect waves-light btn" %></td>
+          <td><%= link_to "show", toy_path(toy.id), class: "waves-effect waves-light btn" %></td>
+          <td><%= link_to "delete", toy_path(toy),
                 method: :delete,
-                data: { confirm: "Are you sure?" } %>
+                data: { confirm: "Are you sure?" }, class: "waves-effect waves-light btn" %>
               </td>
         </tr>
       <% end %>
     </tbody>
   </table>
 </div>
+

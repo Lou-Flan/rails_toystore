@@ -62,3 +62,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "faker", "~> 2.10"
+
+gem "materialize-sass", "~> 1.0"
+
+gem "material_icons", "~> 2.2"
