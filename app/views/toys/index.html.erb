@@ -1,0 +1,32 @@
+
+  <div>
+    <h4><span>Toys</span></h4>
+  </div>
+
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>User</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @toys.each do |toy| %>
+        <tr>
+          <td><%= toy.name %></td>
+          <td><%= toy.description %></td>
+          <td><%= toy.user %></td>
+          <td>
+            <%= link_to "edit", edit_toy_path(toy.id )%>
+            <%= link_to "show", toy_path(toy.id) %>
+            <%= link_to "delete", toy_path(toy),
+                method: :delete,
+                data: { confirm: "Are you sure?" } %>
+              </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
